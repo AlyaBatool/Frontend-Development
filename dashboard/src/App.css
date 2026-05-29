@@ -1,0 +1,285 @@
+/* --- Base Theme Setup & Document Resets --- */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #f4faf8; /* Light, fresh mint-tinted background */
+  color: #2d3f36; /* Deep charcoal-green for crisp legibility */
+  scroll-behavior: smooth;
+}
+
+.portfolio-dashboard {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hide global scrollbar cleanly */
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none;
+}
+html, body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* --- Navigation Header Rules --- */
+.portfolio-nav {
+  height: 65px;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid #dbeae5; /* Soft matching border */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: 1140px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.student-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.student-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: -0.01em;
+  color: #1a2922;
+}
+
+.academic-tag {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: #e2f4f0; 
+  color: #215c51; 
+  padding: 0.3rem 0.75rem;
+  border-radius: 50px;
+}
+
+/* --- Hero Banner Branding Block --- */
+.portfolio-hero {
+  padding: 5rem 1.5rem 3.5rem 1.5rem;
+  text-align: center;
+  background: #bce1d9; 
+  color: #1a2922;
+}
+
+.hero-content-box {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.hero-badge {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #215c51; 
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.hero-main-title {
+  font-size: 2.5rem;
+  font-weight: 850;
+  letter-spacing: -0.03em;
+  margin: 0.75rem 0 1.25rem 0;
+  line-height: 1.2;
+  color: #111e19;
+}
+
+@media (min-width: 768px) {
+  .hero-main-title { font-size: 3.25rem; }
+}
+
+.hero-description-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #3b5247;
+  margin: 0;
+}
+
+/* --- 6-Task Cards Matrix Area --- */
+.portfolio-workspace {
+  padding: 3rem 1.5rem 6rem 1.5rem;
+  box-sizing: border-box;
+}
+
+.workspace-container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.grid-heading {
+  font-size: 1.35rem;
+  font-weight: 750;
+  letter-spacing: -0.01em;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  color: #1a2922;
+}
+
+/* Responsive CSS Grid setup */
+.tasks-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .tasks-grid-layout { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1024px) {
+  .tasks-grid-layout { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* Card Styling Primitives */
+.task-display-card {
+  background-color: #ffffff;
+  border: 1px solid #e2eee9;
+  border-radius: 1.25rem;
+  padding: 1.75rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 16px rgba(27, 44, 38, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.task-display-card:hover {
+  transform: translateY(-2px);
+  border-color: #bce1d9; /* Subtle accent highlight on hover */
+  box-shadow: 0 12px 24px rgba(21, 41, 34, 0.06);
+}
+
+.card-identity-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.task-icon-frame {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background-color: #ebf6f3;
+  color: #297063;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-sequence-tag {
+  font-family: monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #5c7569;
+  background-color: #f4faf8;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #e2eee9;
+}
+
+.task-title-text {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.75rem 0;
+  color: #1a2922;
+}
+
+.task-short-desc {
+  font-size: 0.925rem;
+  line-height: 1.5;
+  color: #4f685c;
+  margin: 0 0 2rem 0;
+  flex-grow: 1;
+}
+
+.task-link-footer {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
+.action-link-btn {
+  flex-grow: 1;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.65rem 0.5rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  transition: all 0.15s ease;
+  box-sizing: border-box;
+}
+
+.btn-outline {
+  background-color: #ffffff;
+  border: 1px solid #c2dad0;
+  color: #3b5247;
+}
+
+.btn-outline:hover {
+  background-color: #f4faf8;
+  border-color: #297063;
+  color: #297063;
+}
+
+.btn-solid {
+  background-color: #489e8e;
+  border: 1px solid #297063;
+  color: #ffffff;
+}
+
+.btn-solid:hover {
+  background-color: #1d5248; /* Sleek darker shade for active hover states */
+  border-color: #1d5248;
+}
+
+/* --- Footer Platform Rules --- */
+.portfolio-footer {
+  background-color: #ffffff;
+  border-top: 1px solid #e2eee9;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer-container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.footer-copyright-text {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1a2922;
+  margin: 0 0 0.35rem 0;
+}
+
+.footer-sub-tag {
+  font-size: 0.8rem;
+  color: #637e72;
+  margin: 0;
+}
+
+/* Global utility colors */
+.icon-mint { color: #297063; }
