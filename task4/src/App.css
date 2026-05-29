@@ -1,0 +1,258 @@
+/* --- Styling Reset & Scoped Configurations --- */
+.form-page-layout {
+  min-height: 100vh;
+  background-color: #ccd8e4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #334155;
+}
+
+.form-card {
+  background-color: #e5e9ede5;
+  width: 100%;
+  max-width: 540px;
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  padding: 2.5rem;
+  box-sizing: border-box;
+
+}
+
+.text-center { text-align: center; }
+
+/* --- Step Navigation Progress  --- */
+.step-navigation-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.step-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  position: relative;
+}
+
+.node-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f1f5f9;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #e2e8f0;
+  transition: all 0.4s ease;
+}
+
+.node-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  color: #94a3b8;
+  position: absolute;
+  top: 42px;
+  white-space: nowrap;
+  transition: color 0.4s ease;
+}
+
+/* Horizontal Track Connectors */
+.step-connector-line {
+  flex-grow: 1;
+  height: 4px;
+  background-color: #e2e8f0;
+  margin: 0 0.5rem;
+  position: relative;
+  top: -10px; /* Aligns visually with circle centers */
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.line-fill {
+  height: 100%;
+  background-color: #3b82f6;
+  width: 0%;
+  transition: width 0.4s ease;
+}
+
+/* Progress Status States overrides */
+.step-node.active .node-icon {
+  background-color: #ffffff;
+  color: #3b82f6;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+}
+
+.step-node.active .node-label {
+  color: #1e293b;
+}
+
+.step-node.completed .node-icon {
+  background-color: #3b82f6;
+  color: #ffffff;
+  border-color: #3b82f6;
+}
+
+/* --- Form Field Elements UI --- */
+.form-step-panel {
+  margin-top: 1rem;
+}
+
+.step-heading {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group select {
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+  color: #1e293b;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Validation Fault Indicators */
+.form-group input.input-error {
+  border-color: #ef4444;
+  background-color: #fef2f2;
+}
+
+.error-text {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #ef4444;
+  font-weight: 500;
+}
+
+/* Specialized review markup block */
+.review-summary-box {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.review-summary-box p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.checkbox-group {
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.checkbox-label {
+  display: flex;
+  gap: 0.75rem;
+  font-weight: 500 !important;
+  line-height: 1.4;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+/* --- Control Flow Buttons Elements --- */
+.form-actions-footer {
+  display: flex;
+  margin-top: 2.5rem;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 1.5rem;
+}
+
+.push-right {
+  margin-left: auto;
+}
+
+.btn-primary, .btn-secondary, .btn-submit {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.925rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s;
+}
+
+.btn-primary {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+.btn-primary:hover { background-color: #2563eb; }
+
+.btn-secondary {
+  background-color: #f1f5f9;
+  color: #475569;
+}
+.btn-secondary:hover { background-color: #e2e8f0; }
+
+.btn-submit {
+  background-color: #10b981;
+  color: #ffffff;
+}
+.btn-submit:hover { background-color: #059669; }
+
+/* --- Post-Submission Success State Screen --- */
+.success-screen {
+  padding: 2rem 0;
+}
+
+.success-checkmark {
+  color: #10b981;
+  margin-bottom: 1rem;
+}
+
+.success-screen h2 {
+  font-size: 1.5rem;
+  color: #1e293b;
+  margin: 0 0 0.5rem 0;
+}
+
+.success-screen p {
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
