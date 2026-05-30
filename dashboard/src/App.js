@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import "./App.css";
 
 export default function App() {
-  // Beginner-friendly dataset containing your assignment project metadata
   const assignmentTasks = [
     {
       id: 1,
@@ -19,14 +18,14 @@ export default function App() {
       live: "https://frontend-development-beige.vercel.app/"
     },
     {
-      id: 3,
+     id: 3,
       title: "Admin Dashboard UI",
       desc: "A responsive control panel containing structural metric breakdown data displays, user management tables with pagination, and an integrated dark/light theme switch.",
       github: "https://github.com/AlyaBatool/Frontend-Development/tree/main/task3",
       live: "https://frontend-development-wjq3.vercel.app/"
     },
     {
-      id: 4,
+    id: 4,
       title: "Multi-Step Form",
       desc: "A progressive user enrollment multi-stage form featuring inline input field validation criteria and localStorage tracking caches.",
       github: "https://github.com/AlyaBatool/Frontend-Development/tree/main/task4",
@@ -51,14 +50,14 @@ export default function App() {
   return (
     <div className="portfolio-dashboard">
       
-      {/* --- Top Navigation Header Bar --- */}
+      {/* --- Responsive Navigation Header Bar --- */}
       <nav className="portfolio-nav">
         <div className="nav-container">
-          <div className="student-brand">
+          <div className="nav-meta-block">
             <span className="brand-symbol">👤</span>
             <span className="student-name">Alya Batool</span>
           </div>
-          <div className="student-brand">
+          <div className="nav-meta-block email-block">
             <span className="brand-symbol">📩</span>
             <span className="student-name">alya.batool118@gmail.com</span>
           </div>
@@ -77,10 +76,9 @@ export default function App() {
           <span className="hero-badge">Internship Tasks</span>
           <h1 className="hero-main-title">Frontend Development Tasks Dashboard</h1>
           <p className="hero-description-text">
-           Welcome to my technical portfolio workspace. This dashboard showcases 
-           six projects focused on responsive design, state management, working features, and 
-           modern real-time user interfaces.
-
+            Welcome to my technical portfolio workspace. This dashboard showcases 
+            six projects focused on responsive design, state management, working features, and 
+            modern real-time user interfaces.
           </p>
         </motion.div>
       </header>
@@ -109,7 +107,6 @@ export default function App() {
                 <h3 className="task-title-text">{task.title}</h3>
                 <p className="task-short-desc">{task.desc}</p>
 
-                {/* Interaction Action Links */}
                 <div className="task-link-footer">
                   <a href={task.github} target="_blank" rel="noreferrer" className="action-link-btn btn-outline">
                     <span>💻 GitHub</span>
@@ -130,7 +127,7 @@ export default function App() {
           <p className="footer-copyright-text">
             &copy; 2026 Alya. All rights reserved.
           </p>
-          <p className="footer-sub-tag">Nexe-Agent Internship Tasks Dashboard</p>
+          <p className="footer-sub-tag">Internship Tasks Dashboard</p>
         </div>
       </footer>
 
