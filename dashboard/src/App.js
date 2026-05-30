@@ -8,7 +8,7 @@ export default function App() {
       title: "Responsive Landing Page",
       desc: "A mobile-responsive UI featuring an updated split two-column hero design, structural grids, client testimonials, footer and smooth scrolling animations.",
       github: "https://github.com/AlyaBatool/Frontend-Development/tree/main/task1",
-      live: "https://lustrous-nasturtium-fec919.netlify.app/"
+      live: "https://frontend-development-ht1k.vercel.app/"
     },
     {
       id: 2,
